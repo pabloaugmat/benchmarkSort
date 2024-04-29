@@ -69,6 +69,7 @@ void mergeSort(int arr[], int inicio, int fim, SortMetrics *metrics)
     }
 }
 
+//Encapsula o Merge Sort e deixa no padrao de assinatura para ser utilizado na função de benchmark
 void mergeSortWrapper(int arr[], int n, SortMetrics *metrics)
 {
     mergeSort(arr, 0, n - 1, metrics);

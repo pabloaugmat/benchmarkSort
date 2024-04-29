@@ -38,6 +38,7 @@ void quickSort(int arr[], int inicio, int fim, SortMetrics *metrics)
     }
 }
 
+//Encapsula o Quick Sort e deixa no padrao de assinatura para ser utilizado na função de benchmark
 void quickSortWrapper(int arr[], int n, SortMetrics *metrics)
 {
     quickSort(arr, 0, n - 1, metrics);
