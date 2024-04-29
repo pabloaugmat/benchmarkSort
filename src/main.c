@@ -12,7 +12,7 @@
 #include "selectionSort.h"
 #include "mergeSort.h"
 #include "quickSort.h"
-// #include "cubeSort.h"
+#include "cubeSort.h"
 
 const int Seed = 2616; // Seed para que as funções de aleatoriedade sempre gerem os mesmos numeros
 
@@ -126,6 +126,7 @@ void processFiles(FILE *fileList)
         benchmark(selectionSort, arr, n, "Selection Sort");
         benchmark(mergeSortWrapper, arr, n, "Merge Sort");
         benchmark(quickSortWrapper, arr, n, "Quick Sort");
+        benchmark(cubeSort, arr, n, "Cube Sort");
         printf("_______________________________________________________________________________________\n");
 
         free(arr);
