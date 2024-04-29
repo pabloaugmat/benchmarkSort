@@ -1,6 +1,6 @@
 # benchmarkSort
 
-O projeto `benchmarkSort` é uma aplicação desenvolvida em C que compara o desempenho de diversos algoritmos de ordenação. Este projeto inclui implementações de Insertion Sort, Selection Sort, Merge Sort e Quick Sort.
+O projeto `benchmarkSort` é uma aplicação desenvolvida em C que compara o desempenho de diversos algoritmos de ordenação. Este projeto inclui implementações de Insertion Sort, Selection Sort, Merge Sort, Quick Sort e Cube Sort.
 
 ## Pré-requisitos
 
@@ -15,7 +15,7 @@ Para compilar o projeto, siga os passos abaixo. Certifique-se de estar no diret�
 Execute o comando:
 
 ```bash
-gcc -o main main.c benchmark.c readFile.c insertionSort.c selectionSort.c mergeSort.c quickSort.c
+gcc -o main main.c benchmark.c readFile.c writeFile.c aleatorios.c insertionSort.c selectionSort.c mergeSort.c quickSort.c cubeSort.c -lm
 ```
 Este comando compila o código e gera um executável chamado main.
 
@@ -34,11 +34,14 @@ Certifique-se de que todos os arquivos necessários estão disponíveis no mesmo
 |------------------|-----------------------------------------------------------------------|
 | `main.c`         | Arquivo principal que inicia a execução do programa.                  |
 | `benchmark.c`    | Contém funções para medir e comparar os tempos de execução dos algoritmos de ordenação. |
+| `aleatorios.c`   | Funções para gerar arrays de inteiros aleatorios.                     |
+| `writeFile.c`    | Funções para escrever dados em arquivos que serão ordenados.          |
 | `readFile.c`     | Funções para ler dados de arquivos que serão ordenados.               |
 | `insertionSort.c`| Implementação do algoritmo Insertion Sort.                            |
 | `selectionSort.c`| Implementação do algoritmo Selection Sort.                            |
 | `mergeSort.c`    | Implementação do algoritmo Merge Sort.                                |
 | `quickSort.c`    | Implementação do algoritmo Quick Sort.                                |
+| `cubeSort.c`     | Implementação do algoritmo Cube Sort.                                 |
 
 
 ## Contribuindo
