@@ -1,1 +1,1 @@
-../data/entradaTeste.txt
+../data/tamanhos.txt
