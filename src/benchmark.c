@@ -16,7 +16,7 @@ void benchmark(void (*sortFunc)(int *, int, SortMetrics *), int arr[], int n, co
     SortMetrics metrics = {0, 0, 0.0}; // inicializa os contadores
     struct timeval start, end;
 
-    //a função utiliza a biblioteca time para calcular o tempo de ordenação
+    // a função utiliza a biblioteca time para calcular o tempo de ordenação
     gettimeofday(&start, NULL);
     sortFunc(arr, n, &metrics);
     gettimeofday(&end, NULL);
@@ -25,4 +25,19 @@ void benchmark(void (*sortFunc)(int *, int, SortMetrics *), int arr[], int n, co
     metrics.timeSpent += (end.tv_usec - start.tv_usec) / 1000.0; // soma os demais microsegundos convertidos para milisegundos
 
     printf("%s: Tamanho do array: %d, Comparacoes: %lld, Copias: %lld, Tempo gasto: %f ms\n", sortName, n, metrics.numComparisons, metrics.numCopies, metrics.timeSpent);
+
+    // Abre arquivo para armazenar os resultados em modo de anexação
+    FILE *fp = fopen("../data/benchmark_results.txt", "a");
+    if (fp == NULL)
+    {
+        perror("Erro ao abrir arquivo");
+        exit(EXIT_FAILURE);
+    }
+
+    // Escreve os resultados no arquivo
+    fprintf(fp, "%s: Tamanho do array: %d, Comparacoes: %lld, Copias: %lld, Tempo gasto: %f ms\n",
+            sortName, n, metrics.numComparisons, metrics.numCopies, metrics.timeSpent);
+
+    // Fecha o arquivo
+    fclose(fp);
 }
