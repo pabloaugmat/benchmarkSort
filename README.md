@@ -24,9 +24,10 @@ Este comando compila o código e gera um executável chamado main.
 Após a compilação, você pode executar o programa com:
 
 ```bash
-./main
+./main dataList.txt
 ```
 Certifique-se de que todos os arquivos necessários estão disponíveis no mesmo diretório do executável, ou especifique os caminhos corretos ao executar o programa.
+Após cada execução certifique-se de limpar o arquivo dataList.txt, deixando somente o caminho para tamanhos.txt.
 
 ## Estrutura do Projeto
 
@@ -42,6 +43,8 @@ Certifique-se de que todos os arquivos necessários estão disponíveis no mesmo
 | `mergeSort.c`    | Implementação do algoritmo Merge Sort.                                |
 | `quickSort.c`    | Implementação do algoritmo Quick Sort.                                |
 | `cubeSort.c`     | Implementação do algoritmo Cube Sort.                                 |
+| `dataList.txt`   | Arquivo com uma lista de caminho para os demais arquivos utilizados no sistema. |
+| `../data/tamanhos.txt` | Arquivo com os tamanhos de arrays a serem gerados aleatoriamente. |
 
 
 ## Contribuindo
