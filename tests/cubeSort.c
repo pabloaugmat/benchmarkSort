@@ -1,4 +1,4 @@
-#include "../src/mergeSort.h"
+#include "../src/cubeSort.h"
 #include <stdio.h>
 #include <stdbool.h>
 
@@ -20,7 +20,7 @@ void printArray(int *arr, int n) {
     printf("\n");
 }
 
-// Função de teste para o mergeSort
+// Função de teste para o cubeSort
 void test() {
     // Array estático para teste
     int testArray[] = {5, 3, 8, 4, 2};
@@ -29,8 +29,8 @@ void test() {
     // Inicializa as métricas
     SortMetrics metrics = {0, 0};
 
-    // Chama o mergeSort
-    mergeSortWrapper(testArray, n, &metrics);
+    // Chama o cubeSort
+    cubeSort(testArray, n, &metrics);
 
     // Verifica se o array está ordenado
     if (isSorted(testArray, n)) {
