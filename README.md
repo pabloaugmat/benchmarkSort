@@ -15,7 +15,7 @@ Para compilar o projeto, siga os passos abaixo. Certifique-se de estar no diret�
 Execute o comando:
 
 ```bash
-gcc -o main main.c benchmark.c readFile.c writeFile.c aleatorios.c insertionSort.c selectionSort.c mergeSort.c quickSort.c cubeSort.c -lm
+gcc -o main main.c benchmark.c readFile.c writeFile.c aleatorios.c insertionSort.c selectionSort.c mergeSort.c quickSort.c cubeSort.c
 ```
 Este comando compila o código e gera um executável chamado main.
 
@@ -45,6 +45,7 @@ Após cada execução certifique-se de limpar o arquivo dataList.txt, deixando s
 | `cubeSort.c`     | Implementação do algoritmo Cube Sort.                                 |
 | `dataList.txt`   | Arquivo com uma lista de caminho para os demais arquivos utilizados no sistema. |
 | `../data/tamanhos.txt` | Arquivo com os tamanhos de arrays a serem gerados aleatoriamente. |
+| `../data/benchmark_results.txt` | Arquivo criado após a execução do programa, contem os resultados. |
 
 
 ## Contribuindo
